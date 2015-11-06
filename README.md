@@ -16,11 +16,8 @@ brute lets you to plot it simple stupid.
 
 ![20.svg](https://rawgit.com/Macroz/brute/master/example/20.svg)
 
-FIXME
-
 ## License
 
-Copyright © 2015 FIXME
+Copyright © 2015 Markku Rontu
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
