@@ -1,6 +1,6 @@
 # brute
 
-brute lets you to plot it simple stupid.
+brute lets you to *plot it simple stupid*.
 
 ## Usage
 
