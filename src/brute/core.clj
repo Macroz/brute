@@ -20,12 +20,15 @@
                       attrs)]
          charts)))
 
-(defn plot [coll]
+(defn plot1 [attrs coll]
   (let [n (count coll)
         width (/ 1280 n)
         miny (apply min coll)
         maxy (apply max coll)
         height (/ 720 (Math/abs (- maxy miny)))
         middle (* (/ (Math/abs maxy) (Math/abs (- maxy miny))) 720)]
-    (wrap-svg {:style "margin: auto; height: 100%;"}
-              [(bar-chart {:fill "#777"} width height middle coll)])))
+    (bar-chart (merge {:fill "#777"} attrs) width height middle coll)))
+
+(defn plot [& plots]
+  (wrap-svg {:style "margin: auto; height: 100%;"}
+            (map #(apply plot1 %) (partition 2 plots))))
