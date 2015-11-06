@@ -9,13 +9,14 @@ brute lets you to *plot it simple stupid*.
 ```
 
 ```clj
-(spit "example/20.svg" (plot (repeatedly 20 #(- (rand) 0.5))))
+(spit "example/20.svg" (plot {:fill "black"} (repeatedly 200 #(- (rand) 0.5))
+                             {:fill "green" :opacity "0.5"} (repeatedly 20 #(- (rand) 0.5))))
 ```
 
 ![20.svg](https://rawgit.com/Macroz/brute/master/example/20.svg)
 
 ```clj
-(spit "example/800.svg" (plot (repeatedly 800 #(- (rand) 0.5))))
+(spit "example/800.svg" (plot {} (repeatedly 800 #(- (rand) 0.5))))
 ```
 
 ![800.svg](https://rawgit.com/Macroz/brute/master/example/800.svg))
