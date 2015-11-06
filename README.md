@@ -8,13 +8,13 @@ brute lets you to plot it simple stupid.
 (spit "example/800.svg" (plot (repeatedly 800 #(- (rand) 0.5))))
 ```
 
-![800.svg](example/800.svg)
+![800.svg](https://rawgit.com/Macroz/brute/master/example/800.svg))
 
 ```clj
 (spit "example/20.svg" (plot (repeatedly 20 #(- (rand) 0.5))))
 ```
 
-![800.svg](example/20.svg)
+![20.svg](https://rawgit.com/Macroz/brute/master/example/20.svg)
 
 FIXME
 
