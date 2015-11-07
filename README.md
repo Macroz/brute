@@ -21,6 +21,15 @@ brute lets you to *plot it simple stupid*.
 
 ![800.svg](https://rawgit.com/Macroz/brute/master/example/800.svg))
 
+```clj
+(spit "example/signal.svg"
+      (brute/plot {} (take 1280 signal)
+                  {:fill "#393" :opacity 0.5} (average 1024 (take 1280 signal))))
+```
+
+![signal.svg](https://rawgit.com/Macroz/brute/master/example/signal.svg))
+
+
 ## License
 
 Copyright © 2015 Markku Rontu
