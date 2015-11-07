@@ -4,8 +4,8 @@
 (defn bar [width height middle i v]
   (let [x (* i width)
         y (- middle (* v height))
-        h (Math/abs (* v height))
-        y (if (< v 0) middle y)]
+        y (if (< v 0) middle y)
+        h (Math/abs (* v height))]
     [:rect {:x x :y y :width width :height h}]))
 
 (defn bar-chart [attrs width height middle coll]
@@ -23,10 +23,11 @@
 (defn plot1 [attrs coll]
   (let [n (count coll)
         width (/ 1280 n)
-        miny (apply min coll)
-        maxy (apply max coll)
-        height (/ 720 (Math/abs (- maxy miny)))
-        middle (* (/ (Math/abs maxy) (Math/abs (- maxy miny))) 720)]
+        miny (double (apply min coll))
+        maxy (double (apply max coll))
+        data-height (* 2.0 (Math/max (Math/abs miny) (Math/abs maxy)))
+        height (/ 720 data-height)
+        middle 360]
     (bar-chart (merge {:fill "#777"} attrs) width height middle coll)))
 
 (defn plot [& plots]
