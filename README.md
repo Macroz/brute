@@ -27,7 +27,7 @@ brute lets you to *plot it simple stupid*.
             {:fill "#393" :opacity 0.5} (average 1024 (take 1280 signal))))
 ```
 
-![signal.svg](https://rawgit.com/Macroz/brute/master/example/signal.svg))
+![signal.svg](https://rawgit.com/Macroz/brute/master/example/signal.svg)
 
 
 ## License
