@@ -5,7 +5,7 @@
   (let [x (* i width)
         y (- middle (* v height))
         y (if (< v 0) middle y)
-        h (Math/abs (* v height))]
+        h (Math/abs (double (* v height)))]
     [:rect {:x x :y y :width width :height h}]))
 
 (defn bar-chart [attrs width height middle coll]
@@ -31,7 +31,7 @@
         width (/ 1280 n)
         miny (double (apply min coll))
         maxy (double (apply max coll))
-        data-height (* 2.0 (Math/max (Math/abs miny) (Math/abs maxy)))
+        data-height (* 2.0 (Math/max (Math/abs (double miny)) (Math/abs (double maxy))))
         height (/ 720 data-height)]
     {:miny miny
      :maxy maxy
