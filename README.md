@@ -13,13 +13,13 @@ brute lets you to *plot it simple stupid*.
                              {:fill "green" :opacity "0.5"} (repeatedly 20 #(- (rand) 0.5))))
 ```
 
-![20.svg](https://rawgit.com/Macroz/brute/master/example/20.svg)
+![20.svg](./example/20.svg)
 
 ```clj
 (spit "example/800.svg" (plot {} (repeatedly 800 #(- (rand) 0.5))))
 ```
 
-![800.svg](https://rawgit.com/Macroz/brute/master/example/800.svg))
+![800.svg](./example/800.svg))
 
 ```clj
 (spit "example/signal.svg"
@@ -27,7 +27,7 @@ brute lets you to *plot it simple stupid*.
             {:fill "#393" :opacity 0.5} (average 1024 (take 1280 signal))))
 ```
 
-![signal.svg](https://rawgit.com/Macroz/brute/master/example/signal.svg)
+![signal.svg](./example/signal.svg)
 
 
 ## License
